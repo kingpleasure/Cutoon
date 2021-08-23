@@ -1,0 +1,473 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-173468417-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-173468417-1');
+    </script>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@Niraj_pandkar">
+    <meta name="twitter:title" content="Cartoonized your world!">
+    <meta name="twitter:description" content="Want to see your cartoonized self? You can try image or video.">
+    <meta name="twitter:creator" content="@Niraj_pandkar">
+    <meta name="twitter:image" content="static/sample_images/twitter_image.png">
+    <meta name="twitter:domain" content="https://cartoonize-lkqov62dia-de.a.run.app/cartoonize">
+
+    <title>Cutoon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.css">
+    <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.3.3/dist/semantic.min.js"></script>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    <style>
+        html {
+        box-sizing: border-box;
+        }
+        *, *:before, *:after {
+        box-sizing: inherit;
+        }
+        body{
+            background-color: rgb(224, 229, 223);
+        }
+
+        iframe[src*=youtube] {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 100%;
+                    padding-bottom: 10px;
+                }
+    </style>
+</head>
+
+<body>
+        <div id="loader" class="ui disabled dimmer">
+                <div class="ui text loader">Preparing your cartoon! May take an extra few seconds for video :)</div>
+              </div>
+
+<div>
+        <h1><i class="cloud icon"></i>Cutoon</h1>
+    </div>
+
+
+<div class='ui padded centered grid'>
+    <!-- Messaging system -->
+    <div class="row">
+        <div class="center aligned column">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <div style="height:10%; display:flex; align-items: center; justify-content: center">
+                        {% for category, message in messages %}
+                            {% if category == error%}
+                                <h3 style="color:red">{{ message }}</h3>
+                            {% else %}
+                                <h3 style="color:green">{{ message }}</h3>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            {% endwith %}
+        </div>
+    </div>
+
+        
+    <!-- Heading of the page -->
+    <div class="row">
+        <div class='center aligned column'>
+            <h1 style="color:black ;">由此开启你的动漫之旅吧！</h1>
+        </div>
+    </div>
+
+    <!--动漫化示例展示-->
+    <div class="row">
+        <div class='center aligned column'>
+            <h3 style="color:rgb(160, 135, 130) ;">动漫化示例</h3>
+        </div>
+    </div>
+    <div class="row">
+        <!-- <div class="ui stackable grid">
+            <div class="five wide column">
+                <img class="ui medium centered image" src="/static/sample_images/emma2.jpg">
+            </div>
+            <div class="five wide column">
+                <img class="ui medium centered image" src="/static/sample_images/emma2_cartoonized.jpg">
+            </div>
+        </div> -->
+        <div class="five wide column">
+            <img class="ui medium centered image" src="../static/example/littledog.jpg">
+        </div>
+        <div class="five wide column">
+            <img class="ui medium centered image" src="../static/example/littledog_cartoon.jpg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="five wide column">
+            <img class="ui medium centered image" src="../static/example/M.jpg">
+        </div>
+        <div class="five wide column">
+            <img class="ui medium centered image" src="../static/example/M_cartoon.jpeg">
+        </div>
+    </div>
+    <div class="row">
+        <div class="five wide column">
+            <img class="ui medium centered image" src="../static/example/pizza.jpg">
+        </div>
+        <div class="five wide column">
+            <img class="ui medium centered image" src="../static/example/pizza_cartoon.jpeg">
+        </div>
+    </div>
+     <!--视频动漫化示例-->
+     <!--
+    <div class="row">
+        <div class="center aligned column">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/omenajmDBm8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="center aligned column">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GqduSLcmhto" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <div class="row">
+        <div class="center aligned column">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0Y29Z7-urqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+-->
+    <!-- <div class="row">
+            <div class="five wide column">
+                <img src="/static/sample_images/tenor.gif">
+            </div>
+            <div class="five wide column">
+                <img src="/static/sample_images/tenor.gif">
+            </div>
+        </div> -->
+    <!-- FAQs -->
+    
+    <!-- Submission form -->
+    <div class="row">
+        <div class='center aligned column'>
+            <h3 style="color:rgb(160, 135, 130) ;">请选择你想动漫化的类型</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class='center aligned column'>
+            <form id='formsubmit' method="post" action="cartoonize" enctype = "multipart/form-data">
+    
+                <div class="ui buttons">
+                    <div id='uploadimage' class="ui button" style="align-items: center;">
+                        <i class="image icon"></i>
+                        图片
+                    </div>
+                    <div class="or"></div>
+                    <div id='uploadvideo' class="ui button" style="align-items: center;">
+                        <i class="video icon"></i>
+                        视频
+                        <span style="font-size: 10px;">(最大 30MB)</span>
+                    </div>
+                </div>
+        
+                <input type='file' id='hiddeninputfile' accept="image/*" name = 'image' style="display: none"/>
+                <input type="file" id="hiddeninputvideo" accept="video/*" name = 'video' style="display: none">
+                <!-- <input id='submitbutton' class='ui button' type='submit'/> -->
+            </form>
+        </div>
+    </div>
+    {%if cartoonized_image or cartoonized_video%}
+    <div class="row">
+        <div class="column">
+            <!-- Nested grid -->
+            <div class="ui centered grid">
+                <div class="row">
+                    <div class="center aligned column">
+                        {%if cartoonized_image%}
+                        <div class="ui centered card">
+                            <div class="image">
+                                <img src="{{cartoonized_image}}">
+                            </div>
+                        </div>
+                        {%endif%}
+                    
+                        {%if cartoonized_video%}
+                            <video id="player" width="320" height="240" controls>
+                                <source type="video/mp4" src="{{cartoonized_video}}">
+                            </video>
+                        {%endif%}
+                    </div>
+                </div>
+                <div class="row">
+                    {%if cartoonized_video%}
+                        <a href={{cartoonized_video}} download>
+                            
+                            <button class="ui primary button">
+                                <i class="download icon"></i>
+                                下载
+                            </button>
+                        </a>
+                    {%endif%}
+                    {%if cartoonized_image%}
+                        <a href={{cartoonized_image}} download>
+                            <button class="ui primary button">
+                                <i class="download icon"></i>
+                                下载
+                            </button><br>
+                            (有效期仅为5分钟)
+                        </a>
+                    {%endif%}
+                    
+                </div>
+                <div class="row">
+                    <div class="ui stackable three column grid"> 
+                        <div class="three column row">
+                            <div class="center aligned column">
+                                <a href="https://member.bilibili.com/platform/upload/video/frame" class="bilibili-share-button" data-text="点击下面的链接查看你的动漫化成果吧！" data-url="#" data-hashtags="cartoon" data-show-count="false" data-size="large">bilibili</a><script async src="../example/bilibili2.png" charset="utf-8"></script>
+                            </div>
+
+                            <!--分享方式-->
+                            <!--
+                            <div class="center aligned column">
+                                <a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button"更改！ data-text="Check your cartoonized version using the link below!" data-url="https://bit.ly/2CjaaJs" data-hashtags="cartoon" data-show-count="false" data-size="large">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                            </div>
+                    
+                            <div class="center aligned column">
+                                <a href="https://api.whatsapp.com/send?text=Try%20this%20awesome%20AI%20cartoonizer%20using%20-%20https%3A%2F%2Fbit.ly%2F2CjaaJs" target="_blank">
+                                    <button class="mini ui green button">
+                                        <i class="whatsapp icon"></i>Share
+                                    </button>
+                                </a>
+                            </div>
+                            <div class="center aligned column"">
+                                <iframe src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fbit.ly%2F2CjaaJs&layout=button&size=large&width=77&height=28&appId" width="77" height="28" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
+                            </div>
+                        -->
+                        </div>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {%endif%}
+
+    <div class="ui divider"></div>
+    <!-- Sample Images -->
+
+    <div class="row">
+        <div class="column" style="padding-right: 25px; padding-left: 25px;">
+            <div class="ui centered styled accordion" style="margin:auto;">
+                    <!--
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Which paper is this demo based on?
+                    </div>
+                    <div class="content">
+                        <p class="transition hidden">Due credits to the incredible paper - <a target="_blank" href="http://openaccess.thecvf.com/content_CVPR_2020/papers/Wang_Learning_to_Cartoonize_Using_White-Box_Cartoon_Representations_CVPR_2020_paper.pdf">Learning to Cartoonize Using White-box Cartoon Representations</a>
+                        <p>Official implementation of the paper by the author - <a target="_blank" href="https://github.com/SystemErrorWang/White-box-Cartoonization">Github Link</a></p>
+                    </div>
+                -->
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        图像处理和视频处理有什么限制？
+                    </div>
+                    <div class="content">
+                        <ul class="ui list">
+                            <li>我们目前只处理时长小于等于 <b>10秒</b> 的视频，如果您上传的视频超过10秒，则只有 <b>前10秒</b>会被处理。</li>
+                            <li>视频文件最大需不超过：<b>30MB</b></li>
+                            <li>支持的图片格式：<b>jpeg,png</b></li>
+                            <li>支持的视频格式：<b>mp4,webm,avi,mkv</b></li>
+                            <li>目前暂不支持对GIF/TIFF格式的图片进行处理。</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        我的数据会存储在你们的服务器中吗？
+                    </div>
+                    <div class="content">
+                        在运行演示程序时，您的数据会在进程中被删除。
+                    </div>
+
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        卡通化可以用在哪里？
+                    </div>
+                    <div class="content">
+                        <p>我们认为在这些领域可以用得到：</p>
+                        <ul class="ui list">
+                            <li>为动画、卡通和游戏<b>快速制作原型</b></li>
+                            <li>由于它通常会抑制面部特征和信息，因此可用于生成<b>极简艺术</b></li>
+                            <li>游戏可以很容易地导入较短的<b>剪辑场景</b>，而<b>无需使用动作捕捉</b></li>
+                            <li>可以建模成为图形设计师或动画师的"助手"</li>
+                        </ul>
+                    </div>
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        我们是如何实现本demo的？
+                    </div>
+                    <div class="content">
+                        <p>以下为部分关键技术：</p>
+                        <ul class="ui list">
+                            <li>对抗神经网络进行非配对（unpaired）训练，通过宫崎骏，新海诚，细田守的动漫原画作为数据集进行训练;</li>
+                            <li>通过Unet算法优化了边沿检测，减小模型大小和参数。</li>
+                        </ul>
+                    </div>
+                    <!--
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Video and Image attributes?
+                    </div>
+                    <div class="content">
+                        <p>Cake and food assortment photos are OC (Original Content). Other than that -</p> 
+                        <ul class="ui list">
+                            <li>Emma Watson Image: <a target="_blank" href="https://static.independent.co.uk/s3fs-public/thumbnails/image/2019/12/20/15/emma-watson-little-women.jpg?w968">Independent UK</a></li>
+                            <li>Rick Astley - Never Gonna Give You Up (Original Video): <a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">YouTube Link</a></li>
+                            <li>Avengers (Original Video): <a target="_blank" href="https://www.youtube.com/watch?v=u7JO1RCE3Zk">YouTube Link</a></li>
+                            <li>Joey (Original Video): <a target="_blank" href="https://www.youtube.com/watch?v=tHuQiUP-kyQ">YouTube Link</a></li>
+                        </ul>
+                    </div>
+                
+
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        我想了解更多关于使用人工智能的卡通化。
+                    </div>
+                    <div class="content">
+                        <p>The <a href="">author</a> of the above mentioned paper can probably indulge you in some detailed resoursces. Other than that here are some we found - </p>
+                        <ul class="ui list">
+                            <li>CartoonGAN
+                                <ul>
+                                    <li><a target="_blank" href="https://openaccess.thecvf.com/content_cvpr_2018/papers/Chen_CartoonGAN_Generative_Adversarial_CVPR_2018_paper.pdf">Paper</a></li>
+                                    <li><a target="_blank" href="https://github.com/mnicnc404/CartoonGan-tensorflow">Github Link</a></li>
+                                </ul>
+                            </li>
+                            <li>AnimeGAN
+                                <ul>
+                                    <li><a target="_blank" href="https://link.springer.com/chapter/10.1007/978-981-15-5577-0_18">Paper</a></li>
+                                    <li><a target="_blank" href="https://github.com/TachibanaYoshino/AnimeGAN">Github Link</a></li>
+                                </ul>
+                            </li>   
+                        </ul>
+                    </div>
+                -->
+                    <!--
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        为什么我们要制作这个demo？
+                    </div>
+                    <div class="content">
+                        <p>Honestly we thought this was a cool application of GAN but didn't find any demo available. 
+                            Our friends wanted to try it so we made a quick demo for images; which then later got extended to videos.</p>
+                        <p>Also we wanted to learn the deployment architecture which would allow us to serve such power hungry inference in the least money hogging method possible. (Blog post coming soon!)</p>
+                    </div>
+                -->
+                    
+                    <!--
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Help us pay the bills?
+                    </div>
+                    <div class="content">
+                        If you liked our demo and want to support us, please donate - <a href="https://www.paypal.me/tjdevworks">Paypal Link</a>
+                    </div>
+                -->
+
+                    <!--
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        Do you want to share your feedback?
+                    </div>
+                    <div class="content">
+                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevnAJeRc0JvoXAY_wNOu4jKb5tM3PKmwZMzH5tDnxVr1bXzQ/viewform?embedded=true" width="550" height="605" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    </div>
+                -->
+
+
+
+
+                    <!-- <div class="title">
+                        <i class="dropdown icon"></i>
+                        What is the deployment architecture of this project?
+                    </div>
+                    <div class="content">
+                        <p>This is a Flask app which resides on a Cloud Run instance with Cloud Storage integration. We've leveraged Algorithmia's community cloud AI layer for our inference.</p>
+                        <!-- <p><a href="https://github.com/nirajpandkar/x-ize/tree/wb_cartoonizer">Github Link</a></p> -->
+                    <!-- </div> -->
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="center aligned column">
+            <h3><i class="copyright outline icon"></i> 2021 曲线动力</h3>
+            <h3>制作者 <i class="users icon"></i>  TTY,CMC,WHW,YYH</h3>
+           <!--
+            <h3>Made with <i class="heart icon"></i> by <a target="_blank" href="https://twitter.com/Niraj_pandkar">Niraj</a> and <a target="_blank" href="https://twitter.com/tjdevWorks">Tejas</a></h3>
+           -->
+        </div>
+        
+    </div>
+    <!-- <div class="row">
+        <h3>Made with <i class="heart icon"></i> by <a href="https://www.linkedin.com/in/nirajpandkar/">Niraj</a> and <a href="https://www.linkedin.com/in/tejas-mahajan-21175a118/">Tejas</a></h3>
+    </div> -->
+    
+</div>
+
+
+<script>
+    $('.ui.accordion')
+  .accordion()
+;
+    $("#uploadimage").on("click", function() {
+        $('#hiddeninputfile').click(); 
+    });
+
+    $("#uploadvideo").on("click", function() {
+        $('#hiddeninputvideo').click(); 
+    });
+
+    document.getElementById("hiddeninputfile").onchange = function() {
+        $('#loader').removeClass('disabled').addClass('active');
+        document.getElementById("formsubmit").submit();
+        
+    };
+    document.getElementById("hiddeninputvideo").onchange = function() {
+        const fi = document.getElementById('hiddeninputvideo'); 
+        // Check if any file is selected. 
+        if (fi.files.length > 0) { 
+            for (const i = 0; i <= fi.files.length - 1; i++) { 
+  
+                const fsize = fi.files.item(i).size; 
+                const file = Math.round((fsize / 1024)); 
+                // The size of the file.
+                //Change the max_file_size as per your need 
+                const max_file_size = 30720;
+                if (file >= max_file_size) { 
+                    alert( 
+                      "File too Big, please select a file less than 30mb (10 sec at 1080p or 5 sec at 4k)"); 
+                } else { 
+                    $('#loader').removeClass('disabled').addClass('active');
+                    document.getElementById("formsubmit").submit();
+                } 
+            } 
+        } 
+        
+        
+    };
+    var recorder = document.getElementById('recorder');
+</script> 
+</body>
+</html>
